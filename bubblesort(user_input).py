@@ -1,16 +1,15 @@
-def sort(nums):
-    for i in range(len(nums)-1, 0, -1):
-        for j in range(i):
-            if nums[j] > nums[j+1]:
-                temp = nums[j]
-                nums[j] = nums[j+1]
-                nums[j+1] = temp
-                
-n= int(input("Enter a total number: "))
+def sort(num):
+    for i in range(len(num)):
+        for j in range(len(num)-1):
+            if num[j]>num[j+1]:
+                temp=num[j]
+                num[j]=num[j+1]
+                num[j+1]=temp
+n=int(input("enter an size of an array:"))
+num=[0]*n
 
-nums = []
 for i in range(n):
-    val = int(input(f"Enter number {i+1}: "))
-    nums.append(val)
-sort(nums)
-print(nums)
+    num[i]=int(input("enter a value:"))
+
+sort(num)
+print(num)
